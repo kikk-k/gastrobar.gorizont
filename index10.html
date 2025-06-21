@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Гастро-бар "Горизонт"</title>
+<!-- Подключение стиля BootstrapTema -->
+<link rel="stylesheet" href="https://bootstraptema.ru/snippets/style/2015/bootswatch/bootstrap-lumen-v3.3.6.css" media="screen">
+
+<style>
+/* Общие стили для сайта */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #dff2de; /* цвет фона */
+    font-weight: normal;
+}
+
+/* Заголовки и подзаголовки делать полужирными */
+h2, h3 {
+    font-weight: 600;
+}
+
+/* Навигация */
+nav {
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: #575757;
+}
+
+/* Отступ сверху, чтобы не перекрывать контент */
+.section {
+    padding: 80px 20px 20px 20px;
+}
+
+/* Фото логотипа с внутренним фото */
+.logo-container {
+    position: relative;
+    display: inline-block;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.background-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.inner-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 80%;
+    transform: translate(-50%, -50%);
+}
+
+/* Фото квадраты (их 10) */
+.photos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.photos-grid img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Раздел "Меню" */
+#menu {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    width: 30%;
+    box-sizing: border-box;
+}
+
+.center-img {
+    display: block;
+    margin: 20px auto;
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+}
+
+/* Раздел "Новости" */
+#news {
+    max-width: 1000px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+/* Раздел "Бронирование" */
+#booking {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Раздел "Контакты" */
+#contacts {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Кнопка ВКонтакте */
+.vk-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4a76a8;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Адаптивность для мобильных */
+@media(max-width: 768px){
+    .menu-items {
+        flex-direction: column;
+    }
+    .menu-item {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+}
+/* Стиль для кнопки "Наверх" */
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #4a76a8;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    cursor: pointer;
+    text-decoration: none;
+    display: none;
+    z-index: 9999;
+    transition: background-color 0.3s;
+}
+
+.scroll-to-top:hover {
+    background-color: #3b5b8d;
+}
+
+/* Стиль для изображений квадратиков в разделе о заведении */
+.logo-container .small-img {
+    width: 30%; /* 30% от контейнера */
+    height: auto;
+}
+</style>
+</head>
+<body>
+
+<!-- Навигационное меню -->
+<nav>
+    <a href="#about">О заведении</a>
+    <a href="#menu">Меню</a>
+    <a href="#news">Новости</a>
+    <a href="#booking">Бронирование</a>
+    <a href="#contacts">Контакты и адрес</a>
+</nav>
+
+<!-- Контент страницы -->
+<div class="section" id="about" style="margin-top:100px;">
+    <!-- Фото логотипа с внутренним фото -->
+    <div class="logo-container">
+        <img src="https://sun9-19.userapi.com/impf/Tnhz-OAjmTcy_X1oh92DQYGPR36MOhXwAo2U5Q/jVPPzx9Kgu8.jpg?size=1920x768&quality=95&crop=0,525,960,383&sign=af6c0ac0c0d76374231267e157d4f802&type=cover_group" alt="Логотип" class="background-img">
+        <img src="https://sun9-12.userapi.com/s/v1/ig2/GmY_hacwk3G7ZNqSNgGoaeNDbSY1jhHP9oZtBgwW-ouWm4oNPUhfeecwYGKA0QS51-ijkQ_Q63L8dOZDHHFT7z3f.jpg?quality=95&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080,1280x1280&from=bu&cs=1280x0" alt="Внутреннее" class="inner-img">
+    </div>
+    
+    <h2>О заведении</h2>
+    <p>
+        <strong>Гастро-бар "Горизонт" — это современное и динамичное место для тех, кто ценит качественный сервис, разнообразие вкусов и уютную атмосферу. Наше заведение является уникальным пространством, где каждый гость сможет найти что-то особенное — от классических напитков до авторских блюд, а также насладиться живой музыкой, тематическими вечерами и интересными мероприятиями.</strong>
+    </p>
+    <p>
+        Наш гастро-бар ориентирован на широкую аудиторию и предлагает:
+        <ul>
+            <li>Широкий ассортимент напитков: коктейли, пиво, вина, крепкий алкоголь, кофе и свежие соки.</li>
+            <li>Вкусные закуски и горячие блюда: сырные плато, мини-бургеры, сэндвичи, пицца, паста, блюда на гриле и десерты.</li>
+            <li>Развлекательную программу: тематические вечеринки, дегустации, мастер-классы, живые выступления артистов.</li>
+            <li>Услуги по организации мероприятий: приватные вечеринки, корпоративы, презентации и деловые встречи.</li>
+        </ul>
+        «Горизонт» — это место, где сочетаются стиль, комфорт и вкус. Мы создаем пространство для тех, кто ценит высокое качество, утонченность и гармонию. Здесь каждый гость становится частью особенного мира, наполненного вдохновением и элегантностью.
+    </p>
+    <p>
+        Позвольте себе окунуться в атмосферу уюта и насладиться каждым моментом в "Горизонт" — месте, которое устанавливает новые стандарты гастрономического и культурного отдыха.
+    </p>
+    
+    <!-- 10 квадратичных фото -->
+    <div class="logo-container">
+        <img src="https://sun9-26.userapi.com/s/v1/ig2/9SzLfTngFxA-E06GN0OFfLKuCALrENleqnj33BWU7cU1TmVGro_KNCkLaIBSJl_059Hai04GkLfZVSFZB8Fut_Q6.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,960x1280&from=bu&cs=960x0" alt="Фото 1" class="small-img">
+        <img src="https://sun9-78.userapi.com/s/v1/ig2/V8aKFABiCMz75Tcfj9Rxdcv-V1KtoPW45Z9hMs7frcQglBjjidTjJvqHgIj0JjVS3HUUGHww5AtkFrrYPUgtmqMo.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&cs=1920x0" alt="Фото 2" class="small-img">
+        <img src="https://sun9-59.userapi.com/s/v1/ig2/xWPDNtvnuSNF5NGB_Rn73IK5DBdNQjX2M4eftZNgLsRhj11_HECkPg2gLPN5NjUPzvGhol-UDyJ-vu-65MQ5iuCH.jpg?quality=95&as=32x47,48x71,72x106,108x159,160x235,240x353,360x529,480x706,540x794,640x941,720x1059,1080x1588,1280x1882,1440x2117,1741x2560&from=bu&cs=1741x0" alt="Фото 3" class="small-img">
+        <img src="https://sun9-76.userapi.com/s/v1/ig2/nMsCRdwu856o9yZ3jFLVNShIPxt_UzCuZodbytKoh8tlTn84E66W6urwCbdygjL9iU4c7o75EgGQfgkom9P-149f.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&cs=1920x0" alt="Фото 4" class="small-img">
+        <img src="https://sun9-30.userapi.com/s/v1/ig2/XY0o0roia0-BduANWvSS4nvz9YgLAoDYrV7ZqGfZLc6HtS6nVnnYutH24dEPLoz2qEidLfSXaGA0pwiYu8bbyMIj.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&cs=1920x0" alt="Фото 5" class="small-img">
+        <img src="https://sun9-11.userapi.com/s/v1/ig2/M7j6F3ZF_LZ0PzvE4xoN4KJIyPQ8Yni3cn-MMrCqM7Z54HQFceBZO9r9SkorrKfFfilPeIoakg0by4ir5B0JdBzn.jpg?quality=95&as=32x42,48x63,72x94,108x141,160x210,240x314,360x472,480x629,540x707,640x838,720x943,977x1280&from=bu&cs=977x0" alt="Фото 6" class="small-img">
+        <img src="https://sun9-38.userapi.com/s/v1/ig2/GHOq4uwcK1fcfjmn1ZvALZo4WhrglbuUw4uuD90v_VV9MyykIQKedvCGI_THjJCZwalTQzZxOZkOqG4djjcQFHCb.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&cs=1920x0" alt="Фото 7" class="small-img">
+        <img src="https://sun9-74.userapi.com/s/v1/ig2/xkB0gmbol_dty_EEknJbyJnIfxXMXLH7CQjJPoURlTc7lge3ANpxbMdH7mW_q_xMVIa1wkMwJOY_CwO8dUrjm0dY.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&cs=1920x0" alt="Фото 8" class="small-img">
+        <img src="https://sun9-33.userapi.com/s/v1/ig2/FZSiWyQXRbpO8sWF78LIDLVwCujsXX_ckXxFSPaU2E14Emkklt3nLsHtQQ53CuCX4fHu1M2EsY3E7ZCCbN0uJ5ZM.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&cs=1920x0" alt="Фото 9" class="small-img">
+    </div>
+
+    <!-- Раздел "Меню" -->
+    <div class="section" id="menu">
+        <h2>Меню</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="https://sun9-64.userapi.com/s/v1/if2/NO2Ork5Z-1t1-1xTujBbrmcfaUOw2apOFf62ldGI5UFVUVQIRSbIzmWpxgtU2Gtw37z4MgMf30zF5PeXJeIjRaNj.jpg?quality=95&as=32x23,48x34,72x51,108x76,160x113,240x169,360x254,480x338,540x381,640x451,720x507,1080x761,1263x890&from=bu&cs=1263x0" alt="Основное меню" style="width:100%;">
+            </div>
+            <div class="menu-item">
+                <img src="https://sun9-16.userapi.com/s/v1/ig2/mNffK8KIqaHekKJkNW2SzKfiSkWz4-aMVcZ-pc4g52JZgd91jB5fqYLsteiBceIlFAiLVJqhhBiJ5pj5af9yzY8g.jpg?quality=95&as=32x46,48x69,72x104,108x156,160x231,240x347,360x520,480x694,540x780,640x925,720x1040,1080x1561,1238x1789&from=bu&cs=1238x0" alt="Завтраки" style="width:100%;">
+            </div>
+            <div class="menu-item">
+                <img src="https://sun9-37.userapi.com/s/v1/ig2/as7ewn8fHhH7Gj_V2IKUheoxC0-JkfGQZNO4nlVtHZyKIAuMvYpRL0ZPuD-yQMsevwZI3fB7EsYbA12DaBmzrIpt.jpg?quality=95&as=32x45,48x67,72x101,108x152,160x224,240x337,360x505,480x674,540x758,640x898,720x1010,1080x1515,1260x1768&from=bu&cs=1260x0" alt="Бизнес-ланч" style="width:100%;">
+            </div>
+        </div>
+    </div>
+
+    <!-- Раздел "Новости" -->
+    <div class="section" id="news">
+        <h2>Новости</h2>
+        <p>
+            В пятницу прогноз погоды обещает дождь и температуру не больше 18 градусов. Но в Горизонте нас будет согревать живое и душевное исполнение музыкальной группы BlackFox.
+        </p>
+        <p>
+            Король и Шут, Владимир Клявин и другие, а также песни собственного сочинения - это всё BlackFox. Они не делают фонового звучания. Они зажигают сердца своим исполнением.
+        </p>
+        <p>
+            Дата: 20 июня в 20:00 <br>
+            Вход: 500₽ <br>
+            Адрес: ул. Свердлова, 4Б <br>
+            Бронь: +7 (927) 900-39-80
+        </p>
+        <p>Забронируй стол заранее — в такие вечера места заканчиваются быстро.</p>
+
+        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+            <!-- Фото 1 -->
+            <img src="https://sun9-78.userapi.com/s/v1/ig2/amnJxL8rqsPBKKTjYCzpu93xUS-fLg3BCf1XqYxSIyxX6I3kV040t7FKUM9nQxVKRMu12dpy0sxEbWNXnbfnGSP_.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&cs=1920x0" alt="Фото 1" style="width:60%; max-width:300px; height:auto;">
+            <!-- Фото 2 -->
+            <img src="https://sun9-41.userapi.com/s/v1/ig2/WEuquBIi4qSrJD6G3SN4DjmxOyjGBrGXcyjbP2FZok_u68SX5XerfUubRW7flnyFfNrFOZ9lfwIfpuYuzGdm1ofj.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&cs=1920x0" alt="Фото 2" style="width:60%; max-width:300px; height:auto;">
+        </div>
+
+        <!-- Встроенное видео -->
+        <div style="text-align: center; margin-top: 20px;">
+            <iframe src="https://vk.com/video_ext.php?oid=-225085565&id=456240541&hash=d3010f74ab200465" 
+                    width="640" height="360" 
+                    frameborder="0" allowfullscreen="1" 
+                    allow="autoplay; encrypted-media; fullscreen; picture-in-picture" 
+                    style="display:block; margin: 0 auto; max-width: 80%;">
+            </iframe>
+        </div>
+    </div>
+
+    <!-- Раздел "Бронирование" -->
+    <div class="section" id="booking">
+        <h2>Бронирование</h2>
+        <p>Уютный зал идеально подходит для вечеров, где важна каждая деталь — от красивой сервировки до мягкого света и живого общения.</p>
+        <h3>Что мы предлагаем:</h3>
+        <ul>
+            <li>Закрытие зала — 7000 рублей за 4 часа (последующие часы +1000 рублей/час)</li>
+            <li>Заказ по кухне — от 2500 рублей на человека</li>
+        </ul>
+        <h3>Доплата:</h3>
+        <ul>
+            <li>Свой алкоголь - 200 рублей с человека</li>
+        </ul>
+        <h3>Мы можем провести:</h3>
+        <ul>
+            <li>День рождения или юбилей</li>
+            <li>Камерную свадьбу или годовщину</li>
+            <li>Девичник или мальчишник</li>
+            <li>Семейный ужин</li>
+            <li>Кооператив или деловой ужин</li>
+            <li>Тематическую вечеринку</li>
+            <li>Кулинарный мастер-класс</li>
+        </ul>
+        <p>Чтобы забронировать дату или задать вопросы — пишите в сообщения сообщества или звоните нам: +7 927 900-39-80.</p>
+        <p>Пусть ваш праздник будет таким, каким вы его представляете. Ждём вас в «Горизонте»!</p>
+    </div>
+
+    <!-- Раздел "Контакты" -->
+    <div class="section" id="contacts" style="display: flex; align-items: flex-start;">
+        <!-- Основной текст и карта -->
+        <div style="flex: 1; padding-right: 20px;">
+            <h2>Контакты и адрес</h2>
+            <p>Находимся по адресу г.Новокуйбышевск, ул. Свердлова, 4б. На втором этаже рядом с FixPrice</p>
+            <img src="https://sun9-22.userapi.com/s/v1/ig2/RaG8n-asxeWTeZT80lsPCuEY1dB7ep0ZpF5MXNo5fjc1DbfCJs4Cj-DiFSiS_NSScQGMqOgtmVNSpdIpiTKf430g.jpg?quality=95&as=32x49,48x73,72x110,108x165,160x244,240x366,360x549,480x732,540x823,640x976,720x1098,1080x1647,1280x1952,1290x1967&from=bu&cs=1080x0" alt="Карта" class="center-img" style="width: 30%;">
+            <p>Телефон: +7 927 900-39-80</p>
+            <a href="https://vk.com/gorizontgastro" target="_blank" class="vk-button">ВКонтакте</a>
+        </div>
+        <!-- Боковой блок с режимом работы -->
+        <div style="width: 200px; padding: 10px; border-radius: 8px; background-color: rgba(240, 240, 240, 0.5);">
+            <h3 style="margin-top: 0;">Режим работы</h3>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+                <li style="margin-bottom: 8px;">
+                    <div style="display: flex; align-items: center;">
+                        <div style="width: 10px; height: 10px; background-color: black; border-radius: 50%; margin-right: 8px;"></div>
+                        <span>Понедельник: 10:00 - 23:00</span>
+                    </div>
+                </li>
+                <li style="margin-bottom: 8px;">
+                    <div style="display: flex; align-items: center;">
+                        <div style="width: 10px; height: 10px; background-color: black; border-radius: 50%; margin-right: 8px;"></div>
+                        <span>Вторник: 10:00 - 23:00</span>
+                    </div>
+                </li>
+                <li style="margin-bottom: 8px;">
+                    <div style="display: flex; align-items: center;">
+                        <div style="width: 10px; height: 10px; background-color: black; border-radius: 50%; margin-right: 8px;"></div>
+                        <span>Среда: 10:00 - 23:00</span>
+                    </div>
+                </li>
+                <li style="margin-bottom: 8px;">
+                    <div style="display: flex; align-items: center;">
+                        <div style="width: 10px; height: 10px; background-color: black; border-radius: 50%; margin-right: 8px;"></div>
+                        <span>Четверг: 10:00 - 23:00</span>
+                    </div>
+                </li>
+                <li style="margin-bottom: 8px;">
+                    <div style="display: flex; align-items: center;">
+                        <div style="width: 10px; height: 10px; background-color: black; border-radius: 50%; margin-right: 8px;"></div>
+                        <span>Пятница: 10:00 - 1:00</span>
+                    </div>
+                </li>
+                <li style="margin-bottom: 8px;">
+                    <div style="display: flex; align-items: center;">
+                        <div style="width: 10px; height: 10px; background-color: black; border-radius: 50%; margin-right: 8px;"></div>
+                        <span>Суббота: 10:00 - 1:00</span>
+                    </div>
+                </li>
+                <li>
+                    <div style="display: flex; align-items: center;">
+                        <div style="width: 10px; height: 10px; background-color: black; border-radius: 50%; margin-right: 8px;"></div>
+                        <span>Воскресенье: 10:00 - 23:00</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Кнопка "Наверх" -->
+<a href="#" class="scroll-to-top" title="Наверх">↑</a>
+
+<!-- Скрипты -->
+<script>
+  window.addEventListener('scroll', function() {
+    const scrollBtn = document.querySelector('.scroll-to-top');
+    if (window.pageYOffset > 300) {
+      scrollBtn.style.display = 'block';
+    } else {
+      scrollBtn.style.display = 'none';
+    }
+  });
+
+  document.querySelector('.scroll-to-top').addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+</body>
+</html>
